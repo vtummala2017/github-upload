@@ -1,0 +1,97 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>edu.kit.aquaplanning</groupId>
+  <artifactId>aquaplanning</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>aquaplanning</name>
+  <url>https://github.com/domschrei/aquaplanning</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <skipTests>true</skipTests>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+    	<groupId>org.antlr</groupId>
+    	<artifactId>antlr4</artifactId>
+    	<version>4.7</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.sat4j</groupId>
+    	<artifactId>org.sat4j.core</artifactId>
+    	<version>2.3.1</version>
+    </dependency>
+    <dependency>
+    	<groupId>info.picocli</groupId>
+    	<artifactId>picocli</artifactId>
+    	<version>3.8.0</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-lang3</artifactId>
+    <version>3.4</version>
+</dependency>
+
+    
+  </dependencies>
+  
+  <build>
+    <plugins>
+      <plugin>
+        <version>3.8.0</version>
+		<artifactId>maven-compiler-plugin</artifactId>
+		<configuration>
+		  <source>1.8</source>
+		  <target>1.8</target>
+		</configuration>
+	  </plugin>
+
+      <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <archive>
+            <manifest>
+              <addClasspath>true</addClasspath>
+              <classpathPrefix>lib/</classpathPrefix>
+              <mainClass>edu.kit.aquaplanning.Main</mainClass>
+            </manifest>
+          </archive>
+          <descriptorRefs>
+            <descriptorRef>jar-with-dependencies</descriptorRef>
+          </descriptorRefs>
+        </configuration>
+      </plugin>
+	  <plugin>
+	  	<groupId>org.apache.maven.plugins</groupId>
+	  	<artifactId>maven-surefire-plugin</artifactId>
+		<version>2.22.1</version>
+		<configuration>
+		  <argLine>-Djava.library.path=lib/ipasir4j/:${java.library.path}</argLine>
+		  <useSystemClassLoader>false</useSystemClassLoader>
+		  <skipTests>${skipTests}</skipTests>
+		</configuration>
+	  </plugin>
+    </plugins>
+  </build>
+  
+</project>

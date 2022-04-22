@@ -1,0 +1,1 @@
+{ (at-block block4 rooma) (at-robby rooma robot2) (free robot2) (at-robby rooma robot1) (free robot1) (at-block block3 rooma) (at-block block2 rooma) (at-block block1 rooma) (visited rooma) (at-block rooma rooma) (_TRUE) }

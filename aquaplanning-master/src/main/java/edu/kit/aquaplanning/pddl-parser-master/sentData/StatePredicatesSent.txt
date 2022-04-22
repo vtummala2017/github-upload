@@ -1,0 +1,3 @@
+(ROBOT robot3)
+(Free robot3)
+(at-robby roomc robot3)

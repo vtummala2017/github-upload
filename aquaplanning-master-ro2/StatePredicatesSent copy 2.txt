@@ -1,0 +1,8 @@
+(BLOCK block1)
+(at-block block1 rooma)
+(color-block block1 blue)
+(visited roomf)
+(visited roomd)
+(visited roomc)
+(visited roomb)
+(visited rooma)

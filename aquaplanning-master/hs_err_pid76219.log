@@ -1,0 +1,37 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x0000000000000000, pid=76219, tid=15623
+#
+# JRE version: Java(TM) SE Runtime Environment (9.0+11) (build 9.0.4+11)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (9.0.4+11, mixed mode, tiered, compressed oops, g1 gc, bsd-amd64)
+# Problematic frame:
+# C  0x0000000000000000
+#
+# No core dump will be written. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:50928 -javaagent:/Users/vijayanthtummala/eclipse/jee-2019-09/Eclipse.app/Contents/Eclipse/configuration/org.eclipse.osgi/404/0/.cp/lib/javaagent-shaded.jar -Dfile.encoding=UTF-8 edu.kit.aquaplanning.Main /Users/vijayanthtummala/Downloads/aquaplanning-master/trydomain.pddl /Users/vijayanthtummala/Downloads/aquaplanning-master/src/main/java/edu/kit/aquaplanning/pddl-parser-master/tryproblemnewtestr1.pddl
+
+Host: MacBookPro14,1 x86_64 2300 MHz, 4 cores, 8G, Darwin 17.7.0
+Time: Wed Sep  8 19:52:38 2021 EDT elapsed time: 64 seconds (0d 0h 1m 4s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007fa64a838800):  JavaThread "Signal Dispatcher" daemon [_thread_in_vm, id=15623, stack(0x0000700011102000,0x0000700011202000)]
+
+Stack: [0x0000700011102000,0x0000700011202000],  sp=0x00007000112002b8,  free space=1016k
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  jdk.internal.misc.Signal.dispatch(I)V+25 java.base@9.0.4
+v  ~StubRoutines::call_stub
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x0000000000000000
+
+Register to memory mapping:
+
+RAX=

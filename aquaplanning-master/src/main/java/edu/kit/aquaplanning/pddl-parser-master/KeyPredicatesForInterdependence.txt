@@ -1,0 +1,5 @@
+visited
+at-block
+at-robby
+carry
+free

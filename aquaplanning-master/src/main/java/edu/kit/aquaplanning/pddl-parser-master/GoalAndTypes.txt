@@ -1,0 +1,5 @@
+:visited
+ROOM
+:at-block
+BLOCK
+roomb

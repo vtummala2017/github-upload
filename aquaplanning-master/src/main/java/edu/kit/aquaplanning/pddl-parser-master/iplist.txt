@@ -1,0 +1,4 @@
+move_search
+move2_retreive
+drop
+pickup

@@ -1,0 +1,46 @@
+(BLOCK block2)
+(at-block block2 roomf)
+
+(color-block block2 blue)
+
+
+
+
+
+
+
+
+
+
+(at-block block2 roomf)
+(at-block block2 roomb)
+(BLOCK block3)
+(at-block block3 roomj)
+
+(color-block block3 red)
+
+
+
+
+
+
+
+
+
+
+(at-block block3 roomb)
+(BLOCK block4)
+(at-block block4 roome)
+
+(color-block block4 red)
+
+
+
+
+
+
+
+
+
+
+(at-block block4 roome)
